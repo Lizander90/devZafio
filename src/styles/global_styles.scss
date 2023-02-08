@@ -15,39 +15,25 @@ body {
 }
 
 #root {
-  //   display: inline-block;
   width: 100%;
-  //   height: 100vh;
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: center;
-  //   gap: 20px;
-
-  //   margin: 0 auto;
-  //   text-align: center;
 }
 
 .big--text--title {
   font-weight: 700;
-  // font-size: 72px; 
-  font-size: 5vw; 
-
+  font-size: 5vw;
 }
 
 .medium--text--title {
   font-weight: 600;
-  // font-size: 48px;
   font-size: 3vw;
 }
 
 .subject--text--title {
   font-weight: 400;
-  // font-size: 32px;
   font-size: 2vw;
 }
 .info--text--normal {
   font-weight: 300;
-  // font-size: 20px;
   font-size: 1.4vw;
 }
 
