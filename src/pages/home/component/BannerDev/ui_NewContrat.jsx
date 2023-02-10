@@ -16,7 +16,10 @@ const NewContrat_article = () => {
                 style={{ color: '#ffff' }}>
                 Te encontramos profesionales en 5 días y los acompañamos por 3 meses con tutores senior para potenciar y acelerar sus habilidades técnicas
             </p>
-            <input className='btn-dev info--text--normal btn-white btn-contact-now' type={'button'} value={'QUIERO CONTRATAR'}></input>
+            <a className='btn-dev-a btn-white' href='#'>QUIERO CONTRATAR</a>
+            {/* <input
+                className='btn-dev info--text--normal btn-white btn-contact-now'
+                type={'button'} value={'QUIERO CONTRATAR'}></input> */}
         </div>
     </>
 }

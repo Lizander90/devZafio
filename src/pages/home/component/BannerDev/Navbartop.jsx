@@ -15,9 +15,10 @@ const Navbartop = () => {
     const [movilMode, setMovilMode] = useState(getDimensionWindows() <= SCREEN_BREAK_POINT);
 
     //EL COMPONENETE SOLO SE RENDERIZA CUANDO CAMBIE DE VALOR movilMode
-    window.addEventListener('resize', () => { 
+    window.addEventListener('resize', () => {
         console.log(getDimensionWindows())
-        setMovilMode(getDimensionWindows() <= SCREEN_BREAK_POINT) })
+        setMovilMode(getDimensionWindows() <= SCREEN_BREAK_POINT)
+    })
 
 
 
@@ -32,17 +33,19 @@ const Navbartop = () => {
                 {!movilMode &&
                     <>
                         <div className='nav-ul-list info--text--normal'>
-                            <a href='#'>Inicia sesión</a>
-                            <a href='#'>Administra la página</a>
+                            <a className='info--text--normal' href='#'>Inicia sesión</a>
+                            <a className='info--text--normal' href='#'>Administra la página</a>
                         </div>
                         <div className='container-button'>
-                            <input type={'button'} className='btn-dev info--text--normal btn-transparent ' value={'Registrate'} />
-                            <input type={'button'} className='btn-dev info--text--normal btn-white' value={'Contáctanos'} />
+                            {/* <input type={'button'} className='btn-dev info--text--normal 
+                            btn-transparent ' value={'Registrate'} /> */}
+                            <a className='btn-dev-a btn-blue' href='#'> Registrate</a>
+                            <a className='btn-dev-a btn-white' href='#'> Contáctanos</a>
                         </div>
                     </>
                 }
                 {movilMode && <>
-                    <DistributeVertical className='tooggle--icon--menu'/>
+                    <DistributeVertical className='tooggle--icon--menu' />
                     {/* , XLg  */}
                 </>
 

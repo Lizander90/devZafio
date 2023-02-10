@@ -1,17 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap");
 :root {
-  --big--text--font-size: 5.5vw;
+  --big--text--font-size: 4rem;
   --medium--text--font-size: 3rem;
   --subject--text--font-size: 1.7rem;
   --info--text--font-size: 1.3rem;
-  --button--width--white:10rem;
+  --button--width--white: 10rem;
   --button--width: 8rem;
   --button--height: 3.5rem;
 }
 
 @media screen and (max-width: 760px) {
   :root {
-    --medium--text--font-size: 4.7vw;
+    --big--text--font-size: 8.2vw;
+    --medium--text--font-size: 2.6rem;
     --subject--text--font-size: 1.5rem;
   }
 }
@@ -47,8 +48,70 @@ body {
 }
 
 .info--text--normal {
-  font-weight: 400;
+  font-weight: 300;
   font-size: var(--info--text--font-size);
+}
+
+.btn-dev-a {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: var(--button--height);
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: aliceblue;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  padding: 0 15px;
+  z-index: 1;
+  cursor: pointer;
+  transform-origin: right;
+}
+.btn-dev-a::before {
+  content: "";
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  background: #009eff;
+  opacity: 85%;
+  transition: all 0.2s ease-in-out;
+  transform: scaleY(0.5) "";
+  z-index: -1;
+  overflow: hidden;
+}
+.btn-dev-a:hover {
+  box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.4);
+}
+.btn-dev-a:hover::before {
+  content: "";
+  width: 100%;
+  left: 0;
+}
+.btn-dev-a:active {
+  transform: scale(0.98);
+}
+
+.btn-blue {
+  background-color: #2738f5;
+}
+.btn-blue::before {
+  background: #0212c6;
+}
+
+.btn-white {
+  background-color: #fdfdfd;
+  color: #2738f5;
+}
+.btn-white::before {
+  background: #2738f5;
+}
+.btn-white:hover {
+  border-color: #fff;
+  color: #fff;
 }
 
 .btn-dev {
@@ -56,11 +119,13 @@ body {
   height: var(--button--height);
   border-radius: 5px;
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
 .btn-dev:hover {
-  cursor: pointer;
-  transform: scale(1.02);
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+.btn-dev:hover:after {
+  content: "asd";
 }
 .btn-dev:active {
   transform: scale(0.95);
@@ -70,11 +135,4 @@ body {
   background-color: transparent;
   color: white;
   border: 1px solid white;
-}
-
-.btn-white {
-  background-color: white;
-  color: #2738f5;
-  border: 1px solid white;
-  width: var(--button--width--white);
 }/*# sourceMappingURL=global_styles.css.map */

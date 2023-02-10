@@ -10,7 +10,7 @@
   justify-content: space-around;
   align-items: center;
 
-  box-shadow: 1px 1px 5px rgb(#2738f5, 0.4);
+  box-shadow: 1px 1px 5px rgb(#000000, 0.9);
   .navbar-part-left {
     display: flex;
     align-items: center;
@@ -97,15 +97,6 @@
   }
 }
 
-.btn-contact-now {
-  width: fit-content !important;
-  padding-left: 15px;
-  padding-right: 15px;
-  color: #2738f5 !important;
-  font-weight: bolder !important;
-  border-radius: 20px !important;
-}
-
 @media screen and (max-width: 1150px) {
   .container-big-banner {
     flex-wrap: wrap;
@@ -114,11 +105,11 @@
       z-index: 1;
       .container--bigBanner-info {
         gap: 4vw;
-        margin: 40px;
+        margin: 30px 15px;
         width: 90%;
         text-align: center;
         align-items: center;
-        padding: 0px;
+        // padding-right: 30px;
       }
     }
 

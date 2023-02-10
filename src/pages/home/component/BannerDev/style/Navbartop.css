@@ -1,13 +1,20 @@
 .navbar-top {
   width: 100%;
   height: 6vw;
+  min-height: 4rem;
   background-color: #2738f5;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
+}
+.navbar-top .navbar-part-left {
+  display: flex;
+  align-items: center;
 }
 .navbar-top .navbar-part-left img {
   width: 18vw;
+  min-width: 10rem;
 }
 .navbar-top .navbar-part-right {
   display: flex;
@@ -28,9 +35,15 @@
   gap: 15px;
 }
 
+.tooggle--icon--menu {
+  font-size: x-large;
+  cursor: pointer;
+  color: azure;
+}
+
 .container-big-banner {
   width: 100%;
-  height: 55vw;
+  min-height: 55rem;
   background: linear-gradient(180deg, #2738f5 0%, #1e239a 51.04%, #140b34 99.98%);
   background-image: url("/src/assets/devBannerCirculos.svg");
   background-size: cover;
@@ -39,20 +52,54 @@
   justify-content: center;
   justify-items: flex-end;
 }
-.container-big-banner .big-banner-left {
+.container-big-banner .big-banner-left .container--bigBanner-info {
   display: flex;
   flex-direction: column;
   width: 55vw;
   margin-top: 5%;
+  gap: 30px;
+  margin-left: 10vw;
+  position: relative;
 }
 .container-big-banner .big-banner-right {
   display: flex;
   align-items: end;
 }
 .container-big-banner .big-banner-right .container-img-banner img {
-  width: 40vw;
+  width: 44vw;
+  min-width: 30rem;
 }
 
-.btn-contact-now {
-  font-weight: bold !important;
+@media screen and (max-width: 1150px) {
+  .container-big-banner {
+    flex-wrap: wrap;
+    justify-items: first baseline;
+  }
+  .container-big-banner .big-banner-left {
+    z-index: 1;
+  }
+  .container-big-banner .big-banner-left .container--bigBanner-info {
+    gap: 4vw;
+    margin: 30px 15px;
+    width: 90%;
+    text-align: center;
+    align-items: center;
+  }
+  .container-big-banner .big-banner-right {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+  }
+  .container-big-banner .big-banner-right .container-img-banner {
+    position: absolute;
+    display: flex;
+  }
+  .container-big-banner .big-banner-right .container-img-banner img {
+    opacity: 70%;
+  }
+  .btn-contact-now {
+    font-size: medium !important;
+    padding: 0px 15px !important;
+    height: 3rem !important;
+  }
 }/*# sourceMappingURL=Navbartop.css.map */
