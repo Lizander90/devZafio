@@ -1,6 +1,8 @@
 .navbar-top {
   width: 100%;
+
   height: 6vw;
+  min-height: 4rem;
 
   background-color: #2738f5;
 
@@ -8,9 +10,13 @@
   justify-content: space-around;
   align-items: center;
 
+  box-shadow: 1px 1px 5px rgb(#2738f5, 0.4);
   .navbar-part-left {
+    display: flex;
+    align-items: center;
     img {
       width: 18vw;
+      min-width: 10rem;
     }
   }
 
@@ -40,15 +46,26 @@
   }
 }
 
+.tooggle--icon--menu {
+  font-size: x-large;
+  // size: 200px;
+  cursor: pointer;
+  color: azure;
+}
+
 .container-big-banner {
   width: 100%;
-  height: 55vw;
+
+  // height: 55vw;
+  min-height: 55rem;
+
   background: linear-gradient(
     180deg,
     #2738f5 0%,
     #1e239a 51.04%,
     #140b34 99.98%
   );
+
   background-image: url("/src/assets/devBannerCirculos.svg");
   background-size: cover;
   background-position: center;
@@ -57,10 +74,15 @@
   justify-content: center;
   justify-items: flex-end;
   .big-banner-left {
-    display: flex;
-    flex-direction: column;
-    width: 55vw;
-    margin-top: 5%;
+    .container--bigBanner-info {
+      display: flex;
+      flex-direction: column;
+      width: 55vw;
+      margin-top: 5%;
+      gap: 30px;
+      margin-left: 10vw;
+      position: relative;
+    }
   }
 
   .big-banner-right {
@@ -68,16 +90,59 @@
     align-items: end;
     .container-img-banner {
       img {
-        width: 40vw;
+        width: 44vw;
+        min-width: 30rem;
       }
     }
   }
 }
 
 .btn-contact-now {
-  border-radius: 15px !important;
-  height: 3.8vw !important;
-  width: 17vw !important;
-  margin-top: 10vw;
-  font-weight: bold !important;
+  width: fit-content !important;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #2738f5 !important;
+  font-weight: bolder !important;
+  border-radius: 20px !important;
+}
+
+@media screen and (max-width: 1150px) {
+  .container-big-banner {
+    flex-wrap: wrap;
+    justify-items: first baseline;
+    .big-banner-left {
+      z-index: 1;
+      .container--bigBanner-info {
+        gap: 4vw;
+        margin: 40px;
+        width: 90%;
+        text-align: center;
+        align-items: center;
+        padding: 0px;
+      }
+    }
+
+    .big-banner-right {
+      width: 100%;
+      // margin: 0 auto;
+      display: flex;
+      justify-content: end;
+      .container-img-banner {
+        position: absolute;
+        display: flex;
+        img {
+          opacity: 70%;
+        }
+      }
+    }
+  }
+  .btn-contact-now {
+    // transform: scale(0.7);
+    // font-size: large!important;
+    font-size: medium !important;
+    // height: fit-content !important;
+    padding: 0px 15px !important;
+    height: 3rem !important;
+    // font-weight: bolder !important;
+  }
 }

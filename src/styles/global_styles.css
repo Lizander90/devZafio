@@ -1,4 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap");
+:root {
+  --big--text--font-size: 5.5vw;
+  --medium--text--font-size: 3rem;
+  --subject--text--font-size: 1.7rem;
+  --info--text--font-size: 1.3rem;
+  --button--width--white:10rem;
+  --button--width: 8rem;
+  --button--height: 3.5rem;
+}
+
+@media screen and (max-width: 760px) {
+  :root {
+    --medium--text--font-size: 4.7vw;
+    --subject--text--font-size: 1.5rem;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +24,7 @@
 body {
   font-family: "Poppins", sans-serif;
   font-style: normal;
+  overflow-x: hidden;
 }
 
 #root {
@@ -16,27 +33,27 @@ body {
 
 .big--text--title {
   font-weight: 700;
-  font-size: 72px;
+  font-size: var(--big--text--font-size);
 }
 
 .medium--text--title {
-  font-weight: 600;
-  font-size: 48px;
+  font-weight: 500;
+  font-size: var(--medium--text--font-size);
 }
 
 .subject--text--title {
-  font-weight: 400;
-  font-size: 32px;
+  font-weight: 600;
+  font-size: var(--subject--text--font-size);
 }
 
 .info--text--normal {
-  font-weight: 200;
-  font-size: 20px;
+  font-weight: 400;
+  font-size: var(--info--text--font-size);
 }
 
 .btn-dev {
-  width: 135px;
-  height: 60px;
+  width: var(--button--width);
+  height: var(--button--height);
   border-radius: 5px;
   transition: all 0.2s ease-in-out;
 }
@@ -55,8 +72,9 @@ body {
   border: 1px solid white;
 }
 
-.btn-blue {
+.btn-white {
   background-color: white;
   color: #2738f5;
   border: 1px solid white;
+  width: var(--button--width--white);
 }/*# sourceMappingURL=global_styles.css.map */
